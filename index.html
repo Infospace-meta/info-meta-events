@@ -1,199 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Info Meta Events — Tailwind Example</title>
+    <title>Webinar Series</title>
 
     <!-- Tailwind Play CDN (good for prototypes). Remove for production and use a build step. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Optional Tailwind config: extend the color palette and enable forms/typography if needed.
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0ea5a4', // teal-ish
-                        accent: '#7c3aed'   // purple
-                    }
-                }
-            }
-        }
+      // Optional Tailwind config: extend the color palette and enable forms/typography if needed.
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0ea5a4", // teal-ish
+              accent: "#7c3aed", // purple
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body class="bg-gray-50 text-slate-800 antialiased">
+  </head>
+  <body class="bg-gray-50 text-slate-800">
     <!-- NAVBAR -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <a href="#" class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-semibold">IM</div>
-                    <span class="font-semibold text-lg">Info Meta Events</span>
-                </a>
-
-                <nav class="hidden md:flex items-center gap-6 text-sm">
-                    <a href="#" class="text-slate-600 hover:text-slate-900">Home</a>
-                    <a href="#" class="text-slate-600 hover:text-slate-900">Events</a>
-                    <a href="#" class="text-slate-600 hover:text-slate-900">About</a>
-                    <a href="#" class="text-slate-600 hover:text-slate-900">Contact</a>
-                    <a href="#" class="ml-2 inline-flex items-center px-4 py-2 rounded-md bg-primary text-white text-sm hover:opacity-95">Get Tickets</a>
-                </nav>
-
-                <div class="md:hidden">
-                    <!-- Mobile menu button (no JS) -->
-                    <button aria-label="Open menu" class="p-2 rounded-md bg-gray-100">
-                        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
+    <nav class="border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
+        <img
+          src="https://res.cloudinary.com/dpfcle0os/image/upload/v1761842686/infospace_meta_overlay_xvowcv.png"
+          alt=""
+        />
+      </div>
+    </nav>
 
     <!-- HERO -->
-    <main class="py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-                        Discover events that matter — online & in person
-                    </h1>
-                    <p class="mt-4 text-lg text-slate-600 max-w-xl">
-                        Curated conferences, workshops, and meetups across tech, design, and community. Find what fits your schedule and interests.
-                    </p>
+    <main class="max-w-7xl mx-auto p-2">
+      <div class="flex flex-col lg:grid lg:grid-cols-3 lg:gap-8 items-center">
+        <div class="m-4 lg:pt-10 lg:h-[85vh]">
+          <h1 class="text-3xl lg:text-4xl tracking-tight text-slate-900">
+            Principles of Product Design
+          </h1>
+          <p class="mt-4 text-slate-600">
+            What makes a product truly great? Dive into the core principles of
+            product design with Lish AI's own Carla Cheruto. This is a
+            conversation on rethinking the design lifecycle through the lens of
+            innovation, impact, and relevance for Africa.
+          </p>
+          <ul class="space-y-4 py-2">
+            <li>🗓️ 1st November 2025</li>
+            <li>🕗 8:00 – 9:00 PM</li>
+            <li>🎙️ Carla Cheruto, Product Manager at Lish AI</li>
+          </ul>
+          <div
+            class="mt-6 overflow-scroll overflow-y-auto [scrollbar-width:none] h-[44vh] flex flex-col items-center gap-2 text-sm text-slate-500 p-2 rounded-xl bg-white border border-slate-100 shadow-sm"
+          >
+            <p class="text-gray-500 px-6">
+              🚨 Check out our previous events below.
+            </p>
 
-                    <div class="mt-6 flex flex-wrap gap-3">
-                        <a href="#" class="inline-flex items-center px-5 py-3 bg-primary text-white rounded-md shadow-sm hover:opacity-95">Browse Events</a>
-                        <a href="#" class="inline-flex items-center px-5 py-3 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50">Create Event</a>
-                    </div>
-
-                    <div class="mt-6 flex items-center gap-4 text-sm text-slate-500">
-                        <div class="inline-flex items-center gap-2">
-                            <span class="inline-block w-3 h-3 bg-green-400 rounded-full"></span>
-                            <span>Live now: 8 events</span>
-                        </div>
-                        <div class="hidden sm:inline-flex items-center gap-2">
-                            <span class="inline-block w-3 h-3 bg-blue-300 rounded-full"></span>
-                            <span>Virtual & in-person</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="order-first lg:order-last">
-                    <!-- Illustrative card -->
-                    <div class="rounded-2xl bg-gradient-to-br from-white to-slate-50 p-6 shadow-md border border-slate-100">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-sm text-slate-500">Next up</p>
-                                <p class="mt-1 font-semibold text-slate-900">Meta Design Summit</p>
-                                <p class="mt-2 text-sm text-slate-600">Oct 12 · Online · Free</p>
-                            </div>
-                            <div class="text-right">
-                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs bg-accent text-white">Featured</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 grid grid-cols-2 gap-4">
-                            <div class="bg-white rounded-lg p-3 border border-slate-100">
-                                <p class="text-xs text-slate-500">Speakers</p>
-                                <p class="mt-1 font-medium text-slate-800">12+</p>
-                            </div>
-                            <div class="bg-white rounded-lg p-3 border border-slate-100">
-                                <p class="text-xs text-slate-500">Duration</p>
-                                <p class="mt-1 font-medium text-slate-800">3 hours</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 flex gap-3">
-                            <a href="#" class="flex-1 text-center px-4 py-2 bg-primary text-white rounded-md">Join now</a>
-                            <a href="#" class="flex-1 text-center px-4 py-2 border border-slate-200 rounded-md text-slate-700">Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- EVENTS GRID -->
-            <section class="mt-12">
-                <div class="flex items-center justify-between">
-                    <h2 class="text-2xl font-semibold text-slate-900">Upcoming Events</h2>
-                    <a href="#" class="text-sm text-primary hover:underline">View all</a>
-                </div>
-
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Event card -->
-                    <article class="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
-                        <div class="flex items-start justify-between">
-                            <div>
-                                <p class="text-xs text-slate-500">Nov 2 · 10:00 AM</p>
-                                <h3 class="mt-2 font-semibold text-slate-900">AI & Accessibility</h3>
-                                <p class="mt-3 text-sm text-slate-600">Practical sessions on building inclusive AI-powered experiences.</p>
-                            </div>
-                            <div class="ml-4">
-                                <span class="inline-flex items-center px-2 py-1 rounded-md bg-green-50 text-green-700 text-xs">Online</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 flex items-center justify-between text-sm text-slate-500">
-                            <span>Hosted by InfoMeta</span>
-                            <span>Free</span>
-                        </div>
-                    </article>
-
-                    <article class="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
-                        <div class="flex items-start justify-between">
-                            <div>
-                                <p class="text-xs text-slate-500">Nov 14 · 6:30 PM</p>
-                                <h3 class="mt-2 font-semibold text-slate-900">Design Systems Meetup</h3>
-                                <p class="mt-3 text-sm text-slate-600">Local meetup covering tokens, components, and scale.</p>
-                            </div>
-                            <div class="ml-4">
-                                <span class="inline-flex items-center px-2 py-1 rounded-md bg-orange-50 text-orange-700 text-xs">In-person</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 flex items-center justify-between text-sm text-slate-500">
-                            <span>Downtown Studio</span>
-                            <span>$10</span>
-                        </div>
-                    </article>
-
-                    <article class="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
-                        <div class="flex items-start justify-between">
-                            <div>
-                                <p class="text-xs text-slate-500">Dec 1 · 9:00 AM</p>
-                                <h3 class="mt-2 font-semibold text-slate-900">Cloud Native Workshop</h3>
-                                <p class="mt-3 text-sm text-slate-600">Hands-on labs for Kubernetes and observability.</p>
-                            </div>
-                            <div class="ml-4">
-                                <span class="inline-flex items-center px-2 py-1 rounded-md bg-blue-50 text-blue-700 text-xs">Hybrid</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 flex items-center justify-between text-sm text-slate-500">
-                            <span>Enterprise Labs</span>
-                            <span>$49</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
+            <iframe
+              class="w-full aspect-video rounded-lg border border-slate-100 shadow-sm"
+              src="https://www.youtube.com/embed/ZeoyMa9MjKE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="w-full aspect-video rounded-lg border border-slate-100 shadow-sm"
+              src="https://www.youtube.com/embed/DJ4EM-2hj1s?si=L41Mum5K1xr4slH1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="w-full aspect-video rounded-lg border border-slate-100 shadow-sm"
+              src="https://www.youtube.com/embed/0YaQp7xdUf8?si=6O2RlAF7h5pFbE3W"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="w-full aspect-video rounded-lg border border-slate-100 shadow-sm"
+              src="https://www.youtube.com/embed/ReAxI81-0go?si=4HNK9g6P5slhiKAz"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="w-full aspect-video rounded-lg border border-slate-100 shadow-sm"
+              src="https://www.youtube.com/embed/8hLNyQW4UeI?si=6AER3WDY01KnyflL"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              class="w-full aspect-video rounded-lg border border-slate-100 shadow-sm"
+              src="https://www.youtube.com/embed/VVGRjsYxu8E?si=FJOxMgYKTE-Kx-KW"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
+
+        <div class="order-first col-span-2">
+          <!-- Illustrative card -->
+          <div
+            class="rounded-2xl shadow-md border border-slate-100 bg-cover bg-center"
+          >
+            <img
+              src="https://res.cloudinary.com/dpfcle0os/image/upload/v1761837534/Webinar_Series_Posters_ipn26x.png"
+              alt="Event illustration"
+              class="w-full h-full object-cover rounded-2xl border border-slate-100 shadow-sm"
+            />
+          </div>
+        </div>
+      </div>
     </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-sm text-slate-500">© <span id="year"></span> Info Meta Events. All rights reserved.</p>
-            <div class="flex items-center gap-4">
-                <a href="#" class="text-sm text-slate-600 hover:text-slate-900">Privacy</a>
-                <a href="#" class="text-sm text-slate-600 hover:text-slate-900">Terms</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // small script to keep the copyright year current
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-</body>
+  </body>
 </html>
