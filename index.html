@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Webinar Series</title>
+    <title>Sprint 26</title>
 
     <!-- Tailwind Play CDN (good for prototypes). Remove for production and use a build step. -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,18 +13,22 @@
         theme: {
           extend: {
             colors: {
-              primary: "#0ea5a4", // teal-ish
+              primary: "#202020", // teal-ish
               accent: "#7c3aed", // purple
             },
           },
         },
       };
     </script>
+    <script
+      id="luma-checkout"
+      src="https://embed.lu.ma/checkout-button.js"
+    ></script>
   </head>
-  <body class="bg-gray-50 text-slate-800">
+  <body class="bg-primary text-slate-800">
     <!-- NAVBAR -->
-    <nav class="border-b border-slate-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
+    <nav class="border-b border-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-2 lg:px-8 flex">
         <img
           src="https://res.cloudinary.com/dpfcle0os/image/upload/v1761842686/infospace_meta_overlay_xvowcv.png"
           alt=""
@@ -35,30 +39,28 @@
     <!-- HERO -->
     <main class="max-w-7xl mx-auto p-2">
       <div class="flex flex-col lg:grid lg:grid-cols-3 lg:gap-8 items-center">
-        <div class="m-4 lg:pt-5 lg:h-[85vh]">
-          <h1 class="text-3xl lg:text-4xl tracking-tight text-slate-900">
-            Modular Architecture & Data Parallelism
+        <div class="m-4">
+          <!-- <h1 class="text-3xl lg:text-4xl tracking-tight text-slate-900">
+            Re-thinking Software Development
           </h1>
           <p class="mt-4 text-slate-600">
-            Ready to optimize your AI infrastructure? Explore how modular
-            architecture design can enable efficient data parallelism. A deep
-            dive into building scalable systems that handle high-performance
-            computing tasks—from design principles to real-world application.
-          </p>
-          <ul class="space-y-4 py-2">
+            A free 3-month technical series for early-career developers. Hosted
+            by America Spaces & Infospace Meta. in collaboration with Developers
+            Mania
+          </p> -->
+          <!-- <ul class="space-y-4 py-2">
             <li>🗓️ 2nd December 2025</li>
-            <li>🕗 8:00 – 9:00 PM</li>
-            <li>🎙️ Victor Ashioya, AI Engineer & Google Developer Expert</li>
-            <li>
-              💻 Online Event (Google Meet)
-              <a
-                href="https://meet.google.com/fxs-botf-uhd"
-                class="text-blue-500"
-                >Join here</a
-              >
-            </li>
-          </ul>
-          <ul class="flex space-x-6 my-4 justify-center">
+            <li>🕗 2:00 – 4:30 PM</li>
+            <a
+              href="https://luma.com/event/evt-Uje99FBEI8d9ZDX"
+              class="luma-checkout--button px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-primary/90 transition-colors duration-300 inline-block"
+              data-luma-action="checkout"
+              data-luma-event-id="evt-Uje99FBEI8d9ZDX"
+            >
+              Register for Event
+            </a>
+          </ul> -->
+          <!-- <ul class="flex space-x-6 my-4 justify-center">
             <li>
               <a
                 href="https://x.com/infospacemeta"
@@ -144,12 +146,23 @@
                 />
               </a>
             </li>
-          </ul>
+          </ul> -->
 
           <div
-            class="mt-6 overflow-scroll overflow-y-auto [scrollbar-width:none] h-[38vh] flex flex-col items-center gap-2 text-sm text-slate-500 p-2 rounded-xl bg-white border border-slate-100 shadow-sm"
+            class=" overflow-scroll overflow-y-auto [scrollbar-width:none] h-[85vh] flex flex-col items-center gap-2 text-sm text-slate-500 p-2 rounded-xl bg-primary border border-primary shadow-sm"
           >
-            <p class="text-gray-500 px-6">
+            <iframe
+              src="https://luma.com/embed/event/evt-Uje99FBEI8d9ZDX/simple"
+              title="Luma video player"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              style="border: 1px solid #202020; border-radius: 1px"
+              allow="fullscreen; payment"
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+            <!-- <p class="text-gray-500 px-6">
               🚨 Check out our previous events below.
             </p>
             <iframe
@@ -157,7 +170,15 @@
               src="https://www.youtube.com/embed/kz2Ero1EmaE?si=_gjOcP7gwIqLtNNG"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
@@ -166,7 +187,15 @@
               src="https://www.youtube.com/embed/FqcBq1qbOAw?si=QF5Sw5vSuU4Son7b"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
@@ -175,7 +204,14 @@
               src="https://www.youtube.com/embed/ZeoyMa9MjKE"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
               allowfullscreen
             ></iframe>
             <iframe
@@ -183,7 +219,14 @@
               src="https://www.youtube.com/embed/DJ4EM-2hj1s?si=L41Mum5K1xr4slH1"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
               allowfullscreen
             ></iframe>
             <iframe
@@ -191,7 +234,14 @@
               src="https://www.youtube.com/embed/0YaQp7xdUf8?si=6O2RlAF7h5pFbE3W"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
               allowfullscreen
             ></iframe>
             <iframe
@@ -199,7 +249,14 @@
               src="https://www.youtube.com/embed/ReAxI81-0go?si=4HNK9g6P5slhiKAz"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
               allowfullscreen
             ></iframe>
             <iframe
@@ -207,7 +264,14 @@
               src="https://www.youtube.com/embed/8hLNyQW4UeI?si=6AER3WDY01KnyflL"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
               allowfullscreen
             ></iframe>
             <iframe
@@ -215,25 +279,43 @@
               src="https://www.youtube.com/embed/VVGRjsYxu8E?si=FJOxMgYKTE-Kx-KW"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
               allowfullscreen
-            ></iframe>
+            ></iframe> -->
           </div>
         </div>
 
-        <div class="order-first col-span-2">
+        <div class="col-span-2">
           <!-- MAIN POSTER -->
           <div
-            class="rounded-2xl shadow-md border border-slate-100 bg-cover bg-center"
+            class="rounded-2xl  border border-primary bg-cover bg-center"
           >
             <img
-              src="https://res.cloudinary.com/dpfcle0os/image/upload/v1764431510/Infospace-Events/2DecWebinar_h88bye.png"
+              src="https://res.cloudinary.com/dpfcle0os/image/upload/q_auto/f_auto/v1776559040/Infospace-Events/Program_Poster_a5ktfc.png"
               alt="Event illustration"
-              class="w-full h-full object-cover rounded-2xl border border-slate-100 shadow-sm"
+              class="w-full h-full object-cover rounded-2xl border border-primary "
             />
           </div>
         </div>
       </div>
+      <!-- <iframe
+        src="https://luma.com/embed/event/evt-Uje99FBEI8d9ZDX/simple"
+        title="Luma video player"
+        width="100%"
+        height="450"
+        frameborder="0"
+        style="border: 1px solid #bfcbda88; border-radius: 10px"
+        allow="fullscreen; payment"
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe> -->
     </main>
   </body>
 </html>
